@@ -46,8 +46,10 @@ export default function Home() {
   }
 
   function idProximaPergunta() {
+    if(questao) {
       const proximoIndice = idsDasQuestoes.indexOf(questao.id) + 1
       return idsDasQuestoes[proximoIndice]
+    }
   }
 
   function irPraProximoPasso() {
