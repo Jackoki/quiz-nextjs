@@ -6,8 +6,8 @@ import Botao from "@/components/Botao"
 export default function Resultado() {
     const router = useRouter()
 
-    const total = +router.query.total
-    const certas = +router.query.certas
+    const total = parseFloat(router.query.total as string)
+    const certas = parseFloat(router.query.certas as string)
     const percentual = Math.round((certas/total) * 100)
 
     return (
